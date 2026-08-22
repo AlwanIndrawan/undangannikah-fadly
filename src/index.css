@@ -1149,6 +1149,36 @@ select option {
   font-weight: 300;
 }
 
+/* ── Kolom kartu acara + peta mini masing-masing ── */
+.event-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kartu mengisi sisa tinggi kolom agar kedua peta sejajar */
+.event-col .event-card { flex: 1; }
+
+.event-col .location-map {
+  height: 140px;
+  margin: 12px auto 10px;
+}
+
+.event-col .location-detail {
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.btn-map-link {
+  align-self: center;
+  margin-top: 12px;
+}
+
+.btn-map-link .btn-outline {
+  padding: 9px 20px;
+  letter-spacing: 0.22em;
+}
+
 /* ============================================================
    HORMAT KAMI SECTION
    ============================================================ */

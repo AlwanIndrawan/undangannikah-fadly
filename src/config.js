@@ -13,11 +13,11 @@ export const WEDDING = {
   gelar1: "S.Tr.Pt",
   gelar2: "S.Ip",
 
-  ayah1: "Bapak Saparuddin",
-  ibu1:  "Ibu Nursiah",
+  ayah1: "Nur Alamsyah, S.T. Dg. Situju",
+  ibu1:  "Andi Norma. Dg. Bau",
 
-  ayah2: "Bapak Baharuddin",
-  ibu2:  "Ibu Halipa",
+  ayah2: "Mansur Masang. Dg. Naro",
+  ibu2:  "Marwiah",
 
   tanggal: "2026-09-20",
 
@@ -32,12 +32,26 @@ export const WEDDING = {
   },
 
   venue:  "Villa Ajaks, Gallang Rapa",
-  alamat: "Kel. Gantarang, Kec. Tinggimoncong, Kab. Gowa, Sulawesi Selatan",
 
-  mapsUrl: "https://maps.app.goo.gl/7Ak8NoU8CLwLE15RA",
+  akad: {
+    tanggal: "Jumat, 18 September 2026",
+    waktu:   "11:00 WITA – selesai",
+    venue:   "Dusun Mampua, Desa Datara",
+    alamat:  "Dusun Mampua, Desa Datara",
+    mapsUrl: "https://maps.app.goo.gl/7h9JFSFpyPHz3pKB7",
+    // Embed satelit + pin di titik lokasi akad (hasil resolve link pendek)
+    mapsEmbed: "https://maps.google.com/maps?q=-5.4520328,119.8035529(Dusun%20Mampua%2C%20Desa%20Datara)&hl=id&z=16&t=k&output=embed",
+  },
 
-  // Embed peta untuk kartu lokasi — satelit + pin di titik resmi Villa AJAKS
-  mapsEmbed: "https://maps.google.com/maps?q=-5.2248502,119.8713817(Villa%20AJAKS)&hl=id&z=16&t=k&output=embed",
+  resepsi: {
+    tanggal: "Minggu, 20 September 2026",
+    waktu:   "10:00 WITA – selesai",
+    venue:   "Villa Ajaks, Gallang Rapa",
+    alamat:  "Kel. Gantarang, Kec. Tinggimoncong, Kab. Gowa, Sulawesi Selatan",
+    mapsUrl: "https://maps.app.goo.gl/7Ak8NoU8CLwLE15RA",
+    // Embed satelit + pin di titik resmi Villa AJAKS
+    mapsEmbed: "https://maps.google.com/maps?q=-5.2248502,119.8713817(Villa%20AJAKS)&hl=id&z=16&t=k&output=embed",
+  },
 
   batasRsvp: "18 September 2026",
 

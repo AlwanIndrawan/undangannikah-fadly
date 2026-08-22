@@ -465,53 +465,66 @@ function App() {
           <CountDown />
         </Reveal>
 
-        {/* Kartu Akad & Resepsi */}
+        {/* Kartu Akad & Resepsi + peta masing-masing */}
         <Reveal anim="up" delay="250ms">
           <div className="event-cards">
-            {/* RESEPSI lebih dulu — jam 09:00 lebih awal */}
-            <div className="event-card">
-              <div className="event-card-type">Resepsi</div>
-              <div style={{ fontSize:18, marginBottom:8, opacity:0.7 }}>✿</div>
-              <div className="event-card-date">20</div>
-              <div className="event-card-month">September 2026</div>
-              <div className="event-card-time">
-                {WEDDING.resepsi.waktu}<br/>
-                <span style={{ fontSize:10, opacity:0.5 }}>* lebih awal</span>
+            {/* RESEPSI lebih dulu — jam lebih awal */}
+            <div className="event-col">
+              <div className="event-card">
+                <div className="event-card-type">Resepsi</div>
+                <div style={{ fontSize:18, marginBottom:8, opacity:0.7 }}>✿</div>
+                <div className="event-card-date">20</div>
+                <div className="event-card-month">September 2026</div>
+                <div className="event-card-time">
+                  {WEDDING.resepsi.waktu}<br/>
+                  <span style={{ fontSize:10, opacity:0.5 }}>* lebih awal</span>
+                </div>
               </div>
+              <div className="location-map event-col-map">
+                <iframe
+                  src={WEDDING.resepsi.mapsEmbed}
+                  title="Lokasi Resepsi"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <span className="cover-corner tl" /><span className="cover-corner tr" />
+                <span className="cover-corner bl" /><span className="cover-corner br" />
+              </div>
+              <p className="location-detail event-col-venue">{WEDDING.resepsi.venue}</p>
+              <a href={WEDDING.resepsi.mapsUrl} target="_blank" rel="noopener noreferrer"
+                className="btn-map-link">
+                <button className="btn-outline">Buka Peta ↗</button>
+              </a>
             </div>
 
-            <div className="event-card">
-              <div style={{ display:'flex', justifyContent:'center', marginBottom:6 }}>
-                <PallullunganSmall scale={0.65} />
+            <div className="event-col">
+              <div className="event-card">
+                <div style={{ display:'flex', justifyContent:'center', marginBottom:6 }}>
+                  <PallullunganSmall scale={0.65} />
+                </div>
+                <div className="event-card-type">Akad Nikah</div>
+                <div className="event-card-date">18</div>
+                <div className="event-card-month">September 2026</div>
+                <div className="event-card-time">{WEDDING.akad.waktu}</div>
               </div>
-              <div className="event-card-type">Akad Nikah</div>
-              <div className="event-card-date">18</div>
-              <div className="event-card-month">September 2026</div>
-              <div className="event-card-time">{WEDDING.akad.waktu}</div>
+              <div className="location-map event-col-map">
+                <iframe
+                  src={WEDDING.akad.mapsEmbed}
+                  title="Lokasi Akad Nikah"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <span className="cover-corner tl" /><span className="cover-corner tr" />
+                <span className="cover-corner bl" /><span className="cover-corner br" />
+              </div>
+              <p className="location-detail event-col-venue">{WEDDING.akad.venue}</p>
+              <a href={WEDDING.akad.mapsUrl} target="_blank" rel="noopener noreferrer"
+                className="btn-map-link">
+                <button className="btn-outline">Buka Peta ↗</button>
+              </a>
             </div>
-          </div>
-        </Reveal>
-
-        {/* Lokasi */}
-        <Reveal anim="up" delay="350ms" style={{ width:'100%' }}>
-          <div className="location-card">
-            <div className="location-map">
-              <iframe
-                src={WEDDING.mapsEmbed}
-                title="Lokasi acara"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-              <span className="cover-corner tl" /><span className="cover-corner tr" />
-              <span className="cover-corner bl" /><span className="cover-corner br" />
-            </div>
-            <p className="location-name">{WEDDING.venue}</p>
-            <p className="location-detail">{WEDDING.alamat}</p>
-            <a href={WEDDING.mapsUrl} target="_blank" rel="noopener noreferrer"
-              style={{ display:'inline-block', marginTop:14 }}>
-              <button className="btn-outline">Buka Peta ↗</button>
-            </a>
           </div>
         </Reveal>
       </section>
